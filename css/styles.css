@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Quattrocento+Sans:700i|Sanchez');
+@import "footer.css";
+/*
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Sanchez', serif;
+*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+body {
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+h2 {
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+h3 {
+    font-family: 'Quattrocento Sans', sans-serif;
+    margin:0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #234D51;
+}
+img {
+    max-width: 100%;
+}
+
+/*HEADER*/
+span.titulo{
+    color: red;
+    font-size: 2.8rem;
+}
+.hero{
+    background-image: url(../img/fondo.png);
+    opacity: 0.9;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 1rem;
+}
+.header{
+/*NOTA
+al modificar la alineacion de los elemntos flex a column, cambia el comportamiento de
+las propiedades justify-cotent y align-items 
+flex-direction : row; -> justify-content: alinea izq - der;
+                      -> align-items: alinea arriba - abajo;
+
+flex-direction : column; -> justify-content: arriba-abajo
+                      -> align-items: izq -der;
+
+*/
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+.barra{
+    position: fixed;
+    background-color: white;/*#234D51*/
+    width: 100%;
+    top: 0;
+    padding: .7rem 0;
+}
+.barra .contenedor{
+    display: flex;
+    flex-direction: column; 
+}
+/*MENU BAR*/
+#menu-bar{
+    display: none;
+}
+header label{
+	font-size: 30px;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 768px){
+    .barra .contenedor{
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
+}
+.logo,
+.navegacion{
+    text-align: center;
+}
+.navegacion ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 768px){
+    .navegacion{
+        flex:.7;
+        /*
+        flex: 0 0 25rem;
+        */
+    }
+    .navegacion ul{
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+}
+.navegacion ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+
+/*MEDIA QUERY CELULARES*/
+@media screen and (max-width: 400px){
+	.barra .contenedor{
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 80%;
+	}
+	.navegacion{
+		position: absolute;
+		top: 4.5rem;
+		left: -2rem;
+		width: 100%;
+		height: 100vh;
+		background: rgba(51,51,51,0.9);
+        transition: all 0.5s;
+        transform: translateX(-100%);
+	}
+	.navegacion ul li a{
+	    color: white;
+	    font-size: 1.5rem;
+	    display: block;
+		height: 50px;
+		padding: 15px;
+		border-bottom: 1px solid rgba(255,255,255,0.5); 
+	}  
+    .navegacion ul li a:hover {
+        background-color:rgba(255,255,255,0.3);
+    }
+}/*MEDIA QUERY MOVIL RESPONSIVE*/
+    #menu-bar:checked ~ .navegacion {
+/*No funciona si el elemento al que se le aplica la pseudoclase
+no esta al mismo nivel de profundidad del elemento al que se 
+quiere afectar o agregar alguna caracteristica.*/
+        transform: translateX(0%);
+    }
+
+.logo-img{
+    max-width: 18rem; 
+}
+/*letrerito de bienvenido*/
+.header-contenido{
+    max-width: 18rem;
+    color: white;
+    font-size: 1rem;
+    background-color: red;
+    margin-left: 10px;
+}
+/*MENU RESPONSIVO*/
+.menu-responsive{
+	font-size: 1.5em;
+	margin-left: 1em;
+	top: 0;
+}
+
+@media screen and (min-width: 768px){
+	.menu-responsive{
+		display: none;
+	}
+}
+/* Contenido */
+.contenido {
+    background-color: white;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.contenido {
+    padding: 1rem;
+    text-align: center;
+}
+.contenido h3 {
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+.contenido span {
+    color:#db008d;
+}
+.boton {
+    background-color: #008fd1;
+    color: white;
+    padding: .6rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.contenido-principal{
+	text-align: center;
+}
+@media screen and (min-width:480px) {
+    .contenido-principal {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .entrada {
+        flex: 0 1 calc(50% - 1rem);
+
+    }
+
+}
+@media screen and (min-width:768px) {
+    .entrada {
+        flex: 0 1 calc(33% - 1rem);
+    }
+    .contenido-principal h2{
+    	width: 100%;
+    }
+
+}
+
