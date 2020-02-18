@@ -5,105 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>-AZTEC-</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">   
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
 </head>
 <body>
     <header class="header hero">
         <div class="barra">
+
             <div class="contenedor">
                 <div class="logo">
-                    <h3><span class="titulo">A</span>ZTEC</h3>
-            	</div>
+                    <a href="#" ><img src="img/logoR.jpg" alt=""></a>
+                </div>
                 <div class="menu-responsive">
-                    <label class="fas fa-bars" for="menu-bar" id="muestra"></label>
+                <label class="fas fa-bars" for="menu-bar" id="muestra" onclick="openNav();"></label>
                 </div>  
                 <input type="checkbox" id="menu-bar">
-	            <nav class="navegacion">
-	                <ul>
-	                    <li><a href="#">
-                            <i class="fas fa-home"></i>
-                        Inicio</a></li>
-	                    <li><a href="#">
-                            <i class="fas fa-terminal"></i>
-                        Servicios</a></li>
-	                    <li><a href="#">
-                            <i class="fas fa-terminal"></i>
-                        Nosotros</a></li>
-	                    <li><a href="#">
-                            <i class="fas fa-terminal"></i>
-                        Contacto</a></li>
-	                </ul>
-	            </nav>
-  
-            </div><!--.contenedor -->
-        </div><!-- barra -->
+                <nav class="navegacion" id="mySidenav">
+                   <ul>
+                     <li><a href="#services" id="servicess">
+                        <i class="fas fa-terminal"></i>
+                    Servicios</a>
+                </li>
+                <li><a href="#products" id="productss">
+                    <i class="fas fa-terminal"></i>
+                Productos</a>
+            </li>
+            <li><a href="#" id="clientss">
+                <i class="fas fa-terminal"></i>
+            Clientes</a>
+        </li>
+        <li><a href="#us" id="uss">
+            <i class="fas fa-terminal"></i>
+        Nosotros</a>
+    </li>
+    <li><a href="#contacts" id="contactss">
+        <i class="fas fa-mail-bulk"></i>
+    Contacto</a>
+</li>
+</ul>
+</nav>
 
-        <div class="header-contenido">
-            <div class="contenedor">
-                <h1>Bienvenido</h1>
-            </div>
-        </div>
-    </header>
+</div><!--.contenedor -->
+</div><!-- barra -->
+
+<div class="header-contenido">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/antenaC.jpg">
+        <div class="text">Diseño e implementacion de su red por enlaces inalambricos</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/kit1.jpg">
+        <div class="text">Sistemas CCTV e IP para hogar, negocio e industria</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/cisc01.jpg">
+        <div class="text">Configuracion e instalacion de equipos en su infraestructura</div>
+    </div>
+
+    <a class="prev com" onclick="plusSlides(-1)"><i class="fas fa-arrow-alt-circle-left"></i></a>
+    <a class="next com" onclick="plusSlides(1)"><i class="fas fa-arrow-alt-circle-right"></i></a>
+</div>
+
+<div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+</div>
+
+</header>
 
     <div class="contenedor">
+        <a name="services"></a>
             <main class="contenido-principal">
-                	<h2>Nuestros Servicios</h2>
-                <article class="entrada">
+                	
+                    <h2>Nuestros Servicios</h2>
+                <article  class="entrada">
                     <img src="img/kit1.jpg" alt="texto entrada">
                     <div class="contenido">
                         <h3>VIDEOVIGILANCIA CCTV/IP</h3>
-                        <p>Publicado el: <span>19 Julio, 2018</span></p>
-                        <p>Por: <span>Admin</span></p>
-                        <a href="#" class="boton"> Leer más</a>
+                        <p>Venta, instalacion y configuracion de equipos profesionales de CCTV y video vigilancia movil EPCOM,HIKVISION,DAHUA,HILOOK</p>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Ver más</button>
                     </div>
                 </article>
                 <article class="entrada">
-                    <img src="img/kit1.jpg" alt="texto entrada">
+                    <img src="img/cableadoestrucutrado.jpg" alt="texto entrada">
                     <div class="contenido">
-                        <h3>ENLACES INALAMBRICOS</h3>
-                        <p>Publicado el: <span>19 Julio, 2018</span></p>
-                        <p>Por: <span>Admin</span></p>
+                        <h3>CABLEADO ESTRUCTURADO</h3>
+                        <p>Instalacion y despliegue de su red LAN cableada con sistemas certificados de canalización y soporteria.</p>
                         <a href="#" class="boton"> Leer más</a>
                     </div>
                 </article>
                 <article class="entrada">
-                    <img src="img/kit1.jpg" alt="texto entrada">
+                    <img src="img/ENLACE1P.jpeg" alt="texto entrada">
                     <div class="contenido">
-                        <h3>DISEÑO DE REDES CABLEADAS</h3>
-                        <p>Publicado el: <span>19 Julio, 2018</span></p>
-                        <p>Por: <span>Admin</span></p>
+                        <h3>REDES INALAMBRICAS</h3>
+                        <p>Ya sea para intercomunicar o extender su red LAN a grandes distancias, tenemos la solucion optima para hacerlo.</p>
                         <a href="#" class="boton"> Leer más</a>
                     </div>
                 </article>
                 <article class="entrada">
-                    <img src="img/kit1.jpg" alt="texto entrada">
+                    <img src="img/TFFv1.png" alt="texto entrada">
                     <div class="contenido">
                         <h3>DESARROLLO WEB, SISTEMAS A LA MEDIDA</h3>
-                        <p>Publicado el: <span>19 Julio, 2018</span></p>
-                        <p>Por: <span>Admin</span></p>
+                        <p>Damos presencia a su negocio a traves del desarrollo de su pagina web, sistema a la medida de sus operaciones o ambos; con diseño adaptable a celular, tableta, PC.</p>
                         <a href="#" class="boton"> Leer más</a>
                     </div>
                 </article>
                 <article class="entrada">
-                    <img src="img/kit1.jpg" alt="texto entrada">
+                    <img src="img/alarm.PNG" alt="texto entrada">
                     <div class="contenido">
-                        <h3>CORREOS CORPORATIVOS</h3>
-                        <p>Publicado el: <span>19 Julio, 2018</span></p>
-                        <p>Por: <span>Admin</span></p>
+                        <h3>ALARMAS PARA HOGAR O NEGOCIO</h3>
+                        <p>Contamos con personal certificado en sistemas de alarmas Honeywell, asegure su hogar o negocio con sistemas de alarma para detectar intrusiones y reciba notificaciones en tiempo real en su Celular.</p>
                         <a href="#" class="boton"> Leer más</a>
                     </div>
                 </article>
                 <article class="entrada">
-                    <img src="img/kit1.jpg" alt="texto entrada">
+                    <img src="img/nextcloud.png" alt="texto entrada">
                     <div class="contenido">
                         <h3>IMPLEMENTA TU NUBE PRIVADA</h3>
-                        <p>Publicado el: <span>19 Julio, 2018</span></p>
-                        <p>Por: <span>Admin</span></p>
+                        <p>Ya sea en tu site, servidor privado o en nuestros VPS, implementamos tu servicio de alojamiento de archivos</p>
                         <a href="#" class="boton"> Leer más</a>
                     </div>
                 </article>
@@ -111,6 +140,7 @@
 
 <!-- SECCION DE PRECIOS -->
     <section class="precios seccion">
+        <a name="products"></a>
       <h2> NUESTROS PRODUCTOS </h2>
       <div class="contenedor">
         <ul class="lista-precios clearfix">
@@ -118,7 +148,7 @@
           <li>
             <div class="tabla-precio">
               <h3> SISTEMA PARA ADMINISTRACION DE PACIENTES </h3>
-              <p class="numero">IMAGEN</p>
+              <img src="img/DOC1.png" alt="texto entrada">
               <ul>
                 <li>Control de citas, recetas y medicamentos por paciente</li>
                  <li>Guarde historial de Antecedente heredofamiliar de cada paciente</li>
@@ -134,7 +164,8 @@
           <li>
             <div class="tabla-precio">
               <h3> SISTEMA ADMINISTRATIVO DE PAGOS </h3>
-              <p class="numero">IMAGEN</p>
+              <img src="img/FUNC_TOT.png" alt="Control de pagos ">
+              <br>
               <ul>
                 <li>Sistema web con diseño responsivo, adaptable a PC, tabletas y celulares</li>
                 <li>Control de inscripciones a sus servicios, pagos e informes por fecha o relevancia</li>
@@ -142,33 +173,100 @@
                 <li>Seguridad total en su informacion</li>
               </ul>
               <a href="" class="button">Ordenar</a>
-
             </div>
           </li>
 
         </ul>
       </div>
     </section> <!-- CIERRA SECCION DE PRECIOS -->
-
-
-
-
     </div><!--.contenido-->
 
+<!-- .formulario -->
+<a name="contacts"></a>
+	<h1 class="fw-300 centrar-texto">Contactanos</h1>
+
+<section id="formulario" class="contenedor seccion contenido-centrado">
+	<h2 class="fw-300 centrar-texto">
+		Por favor ingrese sus datos
+	</h2>
+
+	<form action="">
+		<fieldset>
+			<legend>Informacion Personal</legend>
+			<label for="nombre">Nombre:</label>
+			<input class="nombre" type="text" id="nombre" placeholder="Tu Nombre">
+
+			<label for="email">E-mail</label>
+			<input type="email" id="email" placeholder="Tu correo" required>
+
+			<label for="telefono">Telefono</label>
+			<input type="tel" id="telefono" placeholder="Tu Telefono" required>
+
+			<label for="mensaje">Mensaje</label>
+			<textarea id="mensaje"></textarea>
+		</fieldset> 
+
+		<fieldset>
+			<legend> Interés </legend>
+			<label for="opciones">¿Producto ó Servicio?</label>
+			<select id="opciones">
+				<option value="" disabled>-- Seleccione --</option>
+				<option value="compra">Instalacion de Camaras</option>
+				<option value="vende">Enlaces Inalambricos</option>
+				<option value="vende">Configuracion de Redes</option>
+				<option value="vende">Pagina Web</option>
+				<option value="vende">Opciones de Software</option>
+			</select>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Contacto</legend>
+			<p>Como desea ser contactado:</p>
+			<div class="forma-contacto">
+				<label for="telefono">Telefono</label>
+				<input type="radio" name="contacto" value="tel" id="telefono">
+
+				<label for="correo">Correo</label>
+				<input type="radio" name="contacto" value="correo" id="correo">
+			</div>
+				<p>Si eligio telefono, eliga fecha y hora para realizar la llamada.</p>
+				<label for="fecha">Fecha:</label>
+				<input type="date" id="fecha">
+
+				<label for="hora">Hora:</label>
+				<input type="time" id="hora" min="9:00" max="22:00">			
+			
+		</fieldset>
+		<input type="submit" value="Enviar" class="boton boton-verde">
+	</form>
+</section>
+
+
+<!-- /.formulario -->
     <footer class="footer">
+        <a name="us"></a>
         <div class="contenedor">
-            <div class="nosostros caja">
-                <h2>Sobre Nosotros</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="nosotros caja">
+                <h2>  
+                    Sobre Nosotros
+                </h2>
+                <p>
+                	Somos uns empresa dedicada a la implementacion y desarrollo de soluciones e TI.
+            	</p>
+                	Contacto:
+            <br>
+            <p>Ing. Antonio Notario: <i class="fas fa-mobile-alt"></i> 221 168 8853</p>          
+            <p>Ing. Jesus Hernandez: <i class="fas fa-mobile-alt"></i> 222 209 9601</p>         
+            <p>Ing. Reyes Tlacomulco: <i class="fas fa-mobile-alt"></i> 222 564 8395</p>
             </div>
 
             <div class="siguenos caja">
                 <h2>siguenos</h2>
                 <nav class="sociales">
-                    <ul>
+                <ul>
                 <li>
-                    <a href="http://facebook.com"><span> Facebook</span></a>
+                    <a href="https://www.facebook.com/ASTEC-ST-357811338252919/"><span> Facebook</span></a>
                 </li>
                 <li>
                     <a href="http://twitter.com"><span> Twitter</span></a>
@@ -187,11 +285,35 @@
             </div>
         </div>
 
-        <p class="copyright">AZTEC 2019 &copy;</p>
+        <p class="copyright">ASTEC 2020 &copy;</p>
     </footer>
-    
-    <script type="text/javascript">
 
-    </script>
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>CCTV/IP</h2>
+      </header>
+      <div class="w3-container">
+        <p>Manejamos las marcas mas confiables y robustas en equipos CCTV</p>
+        <p>Asesoramos y recomendamos a nuestros clientes la mejor opcion de acuerdo a sus necesidades</p>
+        <p>Personal altamente calificado para realizar la instalacion y configuracion requerida.</p>
+        <p>Kit completos de 4, 8, 16 y hsta 32 canales</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>@ASTEC</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/js-slider.js"></script>
+  <script src="js/main.js"></script>
+    
+
+    
+
+
 </body>
 </html>

@@ -59,14 +59,12 @@ div.tabla-precio p.numero{
 ul.lista-precios > li {
     padding: 10px;
 }
-
 p.numero{
     color: #fe4918;
     font-size: 4em;
     display: block;
     margin: 0 0 10px 0;
     font-family: 'Oswald', sans-serif;
-
 }
 div.tabla-precio p.numero{
     color: #000000;
@@ -78,7 +76,6 @@ h2{
     text-transform: uppercase;
     text-align: center;
 }
-
 h2::after{
 /*siempre que se utiliza un after se utiliza content*/
     content: '';
